@@ -1,0 +1,187 @@
+@import "../variables";
+@import "../general.scss";
+
+.hero {
+  background: linear-gradient(#c9e7f2, #62bada);
+
+  button {
+    @extend .btn-reformat;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.8rem 2.4rem;
+
+    .company-name {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 2.6rem;
+
+      .btn-dropdown {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+
+        i {
+          font-size: 1.8rem;
+        }
+      }
+
+      span {
+        font-size: $fs-sm;
+        font-weight: 500;
+      }
+    }
+    .sign-in-btns {
+      display: flex;
+      gap: 5rem;
+
+      .btn-start-free {
+        background-color: #4f46ba;
+        color: $primary-white;
+        padding: 1.6rem 3.6rem;
+      }
+    }
+  }
+
+  .hero-box {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    // align-items: center;
+
+    .hero-text-box {
+      flex: 1;
+      align-self: center;
+      .hero-title {
+        font-size: $fs-hero-title;
+        font-weight: bold;
+        margin-bottom: 2.4rem;
+        line-height: 1.2;
+      }
+
+      .hero-subtitle {
+        font-size: $fs-hero-subtitle;
+        font-weight: normal;
+        color: $text-light-gray;
+        // margin-bottom: 5.6rem;
+      }
+
+      .hero-btns {
+        margin-top: 5.6rem;
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        margin-bottom: 5.4rem;
+
+        .btn-cta {
+          background-color: $deep-blue;
+          color: $primary-white;
+          font-size: $fs-md;
+          padding: 1.6rem 3.8rem;
+          border-radius: 40px;
+        }
+
+        .btn-see-how-it-works {
+          display: flex;
+          align-items: center;
+          color: #3734a9;
+          gap: 1rem;
+          font-size: 1.7rem;
+          i {
+            background-color: #22d497;
+            border-radius: 50%;
+            padding: 1.5rem 1.4rem 1.4rem 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+      .tags {
+        display: flex;
+        gap: 2.4rem;
+        span {
+          display: flex;
+          align-items: center;
+          gap: 0.8rem;
+          color: #757095;
+          font-size: 1.7rem;
+        }
+      }
+    }
+
+    .hero-img-box {
+      flex: 1;
+      position: relative;
+      .img-banking-solution {
+        // align-self: flex-start;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        margin-top: -15%;
+        transform: translateX(20%);
+
+        .round-label {
+          animation: rotation 24s infinite linear;
+
+          @keyframes rotation {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(359deg);
+            }
+          }
+        }
+
+        .round-squash-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #454545;
+          border-radius: 50%;
+          width: 11.9rem;
+          height: 11.9rem;
+          transform: translateX(-235%);
+        }
+      }
+
+      .card-hands-img-box {
+        display: flex;
+        position: absolute;
+        margin-left: 7%;
+
+        top: 0;
+        z-index: 2;
+
+        .img-lefthand-card {
+          z-index: 2;
+          animation: 2s ease-out 0s 1 slideUpFromBottom;
+        }
+        .img-righthand-card {
+          // position: absolute;
+          margin-top: 30%;
+          margin-left: -30%;
+          z-index: 1;
+          animation: 2s ease-in 0s 1 slideUpFromBottom;
+        }
+
+        @keyframes slideUpFromBottom {
+          from {
+            transform: translateY(100%);
+          }
+          to {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+}
