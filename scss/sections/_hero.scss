@@ -2,7 +2,7 @@
 @import "../general.scss";
 
 .hero {
-  background: linear-gradient(#c9e7f2, #62bada);
+  background: linear-gradient(to right, #c9e7f2, #62bada);
 
   button {
     @extend .btn-reformat;
@@ -163,7 +163,7 @@
 
         .img-lefthand-card {
           z-index: 2;
-          animation: 2s ease-out 0s 1 slideUpFromBottom;
+          animation: 1s ease-out 0s 1 slideUpFromBottom;
         }
         .img-righthand-card {
           // position: absolute;

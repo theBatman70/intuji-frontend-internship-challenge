@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "watch:scss": "node-sass --watch scss --output css"
+    "watch:scss": "node-sass --watch scss/main.scss --output css"
   },
   "devDependencies": {
     "node-sass": "^9.0.0"
