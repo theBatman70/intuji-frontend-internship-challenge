@@ -1,0 +1,20 @@
+.testimonials {
+  padding-block: $padding-block-section-lg;
+  margin-bottom: 40rem;
+  div {
+    position: relative;
+    height: auto;
+    .head {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5.2rem;
+    }
+
+    .content-box {
+      display: flex;
+      gap: 4.2rem;
+      position: absolute;
+      width: auto;
+    }
+  }
+}

@@ -1,4 +1,44 @@
 .highlighted-features {
   background-color: $subtle-blue;
-  padding: 14.6rem;
+  padding: $padding-block-section-lg;
+
+  .content-box {
+    .cards-box {
+      gap: 3.2rem;
+      .card {
+        outline: 1px solid #abc8d2;
+        background-color: $primary-white;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        padding: 5.4rem 3.2rem 4rem 3.2rem;
+        img {
+          margin-bottom: 3.2rem;
+          width: 5.5rem;
+        }
+        span {
+          font-weight: 800;
+          margin-bottom: 1.6rem;
+          font-size: 2.2rem;
+        }
+        p {
+          font-size: $fs-sm;
+        }
+      }
+
+      .card:nth-child(1),
+      .card:nth-child(2) {
+        grid-row: span 2;
+      }
+
+      .card:nth-child(3),
+      .card:nth-child(4) {
+        grid-column: 3;
+        padding-block: 3rem;
+        span {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }

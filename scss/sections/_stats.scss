@@ -1,0 +1,47 @@
+.stats {
+  background-color: $deep-blue;
+
+  div {
+    display: flex;
+
+    .left-tag-sm {
+      margin: auto 0;
+      width: 24%;
+      border-right: 2px solid #3d3d3d;
+      padding-block: 8.2rem;
+      padding-inline: 3.4rem;
+      p {
+        font-size: 2rem;
+        color: $primary-white;
+      }
+    }
+
+    .stat-content {
+      padding-block: 7.8rem;
+      padding-left: 6.5rem;
+      color: $primary-white;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .stat {
+        display: flex;
+        flex-direction: column;
+        .number {
+          font-weight: 800;
+          font-size: 7.2rem;
+        }
+        .label {
+          display: flex;
+          align-items: center;
+          gap: 2.4rem;
+          font-size: 3rem;
+
+          img {
+            width: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

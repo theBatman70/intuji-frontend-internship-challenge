@@ -13,6 +13,7 @@ html {
 body {
   font-family: $font-primary;
   background-color: $bg-subtle-white;
+  overflow-x: hidden;
 }
 
 .heading-primary {
@@ -68,7 +69,7 @@ body {
   padding-block: 3.8rem 3.2rem;
   padding-inline: 3.4rem;
 
-  img {
+  .quotation-logo {
     top: 0;
     position: absolute;
     left: 3.4rem;
@@ -83,6 +84,34 @@ body {
 
   span {
     font-size: $fs-vsm;
+  }
+}
+
+.testimonial-box-lg {
+  @extend .testimonial-box;
+  background-color: $primary-white;
+  outline: 1px solid #cfcfcf;
+  border-radius: 5px;
+  display: flex;
+  gap: 2.6rem;
+  width: 70rem;
+  overflow: visible;
+
+  .text-box {
+    width: 60%;
+    p {
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: 1.8rem;
+    }
+
+    span {
+      font-size: 2rem;
+    }
+  }
+
+  .author-img {
+    width: 40%;
   }
 }
 

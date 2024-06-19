@@ -8,7 +8,8 @@ html {
 
 body {
   font-family: "Manrope", sans-serif;
-  background-color: #fafbff; }
+  background-color: #fafbff;
+  overflow-x: hidden; }
 
 .heading-primary {
   font-size: 7rem;
@@ -34,7 +35,7 @@ body {
   font-weight: bold;
   line-height: 1.15; }
 
-.heading-label {
+.heading-label, .recent-blogs .blog .text-box .label {
   font-size: 1.4rem;
   color: #3734a9;
   font-weight: 800;
@@ -51,26 +52,45 @@ body {
   margin: 0 auto;
   padding: 0 3.2rem; }
 
-.testimonial-box {
+.testimonial-box, .testimonial-box-lg {
   position: relative;
   height: auto;
   border-radius: 20px;
   background-color: rgba(196, 196, 196, 0.3);
   padding-block: 3.8rem 3.2rem;
   padding-inline: 3.4rem; }
-  .testimonial-box img {
+  .testimonial-box .quotation-logo, .testimonial-box-lg .quotation-logo {
     top: 0;
     position: absolute;
     left: 3.4rem;
     transform: translateY(-50%); }
-  .testimonial-box p {
+  .testimonial-box p, .testimonial-box-lg p {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.8rem; }
-  .testimonial-box span {
+  .testimonial-box span, .testimonial-box-lg span {
     font-size: 1.4rem; }
 
-.btn-reformat, .hero button {
+.testimonial-box-lg {
+  background-color: #fff;
+  outline: 1px solid #cfcfcf;
+  border-radius: 5px;
+  display: flex;
+  gap: 2.6rem;
+  width: 70rem;
+  overflow: visible; }
+  .testimonial-box-lg .text-box {
+    width: 60%; }
+    .testimonial-box-lg .text-box p {
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: 1.8rem; }
+    .testimonial-box-lg .text-box span {
+      font-size: 2rem; }
+  .testimonial-box-lg .author-img {
+    width: 40%; }
+
+.btn-reformat, .hero button, .recent-blogs button, .faqs .faq-interface .faq-list .faq button {
   border: none;
   background: none;
   cursor: pointer; }
@@ -94,7 +114,8 @@ html {
 
 body {
   font-family: "Manrope", sans-serif;
-  background-color: #fafbff; }
+  background-color: #fafbff;
+  overflow-x: hidden; }
 
 .heading-primary {
   font-size: 7rem;
@@ -120,7 +141,7 @@ body {
   font-weight: bold;
   line-height: 1.15; }
 
-.heading-label {
+.heading-label, .recent-blogs .blog .text-box .label {
   font-size: 1.4rem;
   color: #3734a9;
   font-weight: 800;
@@ -137,26 +158,45 @@ body {
   margin: 0 auto;
   padding: 0 3.2rem; }
 
-.testimonial-box {
+.testimonial-box, .testimonial-box-lg {
   position: relative;
   height: auto;
   border-radius: 20px;
   background-color: rgba(196, 196, 196, 0.3);
   padding-block: 3.8rem 3.2rem;
   padding-inline: 3.4rem; }
-  .testimonial-box img {
+  .testimonial-box .quotation-logo, .testimonial-box-lg .quotation-logo {
     top: 0;
     position: absolute;
     left: 3.4rem;
     transform: translateY(-50%); }
-  .testimonial-box p {
+  .testimonial-box p, .testimonial-box-lg p {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.8rem; }
-  .testimonial-box span {
+  .testimonial-box span, .testimonial-box-lg span {
     font-size: 1.4rem; }
 
-.btn-reformat, .hero button {
+.testimonial-box-lg {
+  background-color: #fff;
+  outline: 1px solid #cfcfcf;
+  border-radius: 5px;
+  display: flex;
+  gap: 2.6rem;
+  width: 70rem;
+  overflow: visible; }
+  .testimonial-box-lg .text-box {
+    width: 60%; }
+    .testimonial-box-lg .text-box p {
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: 1.8rem; }
+    .testimonial-box-lg .text-box span {
+      font-size: 2rem; }
+  .testimonial-box-lg .author-img {
+    width: 40%; }
+
+.btn-reformat, .hero button, .recent-blogs button, .faqs .faq-interface .faq-list .faq button {
   border: none;
   background: none;
   cursor: pointer; }
@@ -315,7 +355,7 @@ body {
       height: 100%; }
 
 .feature-blocks {
-  padding: 7.2rem 0; }
+  padding-block: 7.2rem; }
   .feature-blocks .top-feature {
     margin-bottom: 11.9rem; }
     .feature-blocks .top-feature .feature-head {
@@ -329,7 +369,7 @@ body {
           margin-bottom: 2rem; }
         .feature-blocks .top-feature .feature-head .title-box span {
           font-size: 1.6rem; }
-      .feature-blocks .top-feature .feature-head .testimonial-box {
+      .feature-blocks .top-feature .feature-head .testimonial-box, .feature-blocks .top-feature .feature-head .testimonial-box-lg {
         width: 35%; }
     .feature-blocks .top-feature .cards-box {
       column-gap: 3.2rem; }
@@ -378,7 +418,7 @@ body {
       gap: 1.4rem;
       align-items: center;
       margin-bottom: 1.4rem; }
-    .feature-blocks .feature-block .text-box .testimonial-box {
+    .feature-blocks .feature-block .text-box .testimonial-box, .feature-blocks .feature-block .text-box .testimonial-box-lg {
       width: 80%; }
   .feature-blocks .track-payments {
     margin-bottom: 4rem; }
@@ -386,3 +426,146 @@ body {
 .highlighted-features {
   background-color: #c9e7f2;
   padding: 14.6rem; }
+  .highlighted-features .content-box .cards-box {
+    gap: 3.2rem; }
+    .highlighted-features .content-box .cards-box .card {
+      outline: 1px solid #abc8d2;
+      background-color: #fff;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      padding: 5.4rem 3.2rem 4rem 3.2rem; }
+      .highlighted-features .content-box .cards-box .card img {
+        margin-bottom: 3.2rem;
+        width: 5.5rem; }
+      .highlighted-features .content-box .cards-box .card span {
+        font-weight: 800;
+        margin-bottom: 1.6rem;
+        font-size: 2.2rem; }
+      .highlighted-features .content-box .cards-box .card p {
+        font-size: 1.5rem; }
+    .highlighted-features .content-box .cards-box .card:nth-child(1),
+    .highlighted-features .content-box .cards-box .card:nth-child(2) {
+      grid-row: span 2; }
+    .highlighted-features .content-box .cards-box .card:nth-child(3),
+    .highlighted-features .content-box .cards-box .card:nth-child(4) {
+      grid-column: 3;
+      padding-block: 3rem; }
+      .highlighted-features .content-box .cards-box .card:nth-child(3) span,
+      .highlighted-features .content-box .cards-box .card:nth-child(4) span {
+        margin-bottom: 0; }
+
+.testimonials {
+  padding-block: 14.6rem;
+  margin-bottom: 40rem; }
+  .testimonials div {
+    position: relative;
+    height: auto; }
+    .testimonials div .head {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5.2rem; }
+    .testimonials div .content-box {
+      display: flex;
+      gap: 4.2rem;
+      position: absolute;
+      width: auto; }
+
+.stats {
+  background-color: #3734a9; }
+  .stats div {
+    display: flex; }
+    .stats div .left-tag-sm {
+      margin: auto 0;
+      width: 24%;
+      border-right: 2px solid #3d3d3d;
+      padding-block: 8.2rem;
+      padding-inline: 3.4rem; }
+      .stats div .left-tag-sm p {
+        font-size: 2rem;
+        color: #fff; }
+    .stats div .stat-content {
+      padding-block: 7.8rem;
+      padding-left: 6.5rem;
+      color: #fff;
+      width: 100%;
+      display: flex;
+      justify-content: space-between; }
+      .stats div .stat-content .stat {
+        display: flex;
+        flex-direction: column; }
+        .stats div .stat-content .stat .number {
+          font-weight: 800;
+          font-size: 7.2rem; }
+        .stats div .stat-content .stat .label {
+          display: flex;
+          align-items: center;
+          gap: 2.4rem;
+          font-size: 3rem; }
+          .stats div .stat-content .stat .label img {
+            width: 2rem; }
+
+.recent-blogs {
+  padding-block: 14.6rem; }
+  .recent-blogs h2 {
+    margin-bottom: 7.2rem; }
+  .recent-blogs .top-blog {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.8rem; }
+    .recent-blogs .top-blog .text-box {
+      padding-block: 3.4rem 5.2rem;
+      padding-inline: 2.8rem;
+      display: flex;
+      flex-direction: column; }
+      .recent-blogs .top-blog .text-box button {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        font-weight: 500;
+        gap: 1.6rem;
+        margin-top: 6.8rem; }
+  .recent-blogs .blog .text-box {
+    padding-block: 3.4rem 5.2rem;
+    padding-inline: 2.8rem;
+    display: flex;
+    flex-direction: column; }
+    .recent-blogs .blog .text-box .label {
+      color: #000; }
+    .recent-blogs .blog .text-box .title {
+      font-size: 2.8rem;
+      font-weight: 600; }
+  .recent-blogs .blogs-grid {
+    gap: 2.8rem; }
+    .recent-blogs .blogs-grid .blog {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .recent-blogs .blogs-grid .blog img {
+        width: 100%; }
+
+.faqs h2 {
+  width: 50%; }
+
+.faqs .faq-interface {
+  display: grid;
+  grid-template-columns: 2fr 1fr; }
+  .faqs .faq-interface .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem; }
+    .faqs .faq-interface .faq-list .faq {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #cfcfcf;
+      border-radius: 5px;
+      padding: 2.4rem;
+      background-color: #fff; }
+      .faqs .faq-interface .faq-list .faq .text-box {
+        display: flex;
+        flex-direction: column; }
+        .faqs .faq-interface .faq-list .faq .text-box span {
+          font-size: 2.2rem;
+          font-weight: 800; }
+        .faqs .faq-interface .faq-list .faq .text-box p {
+          font-size: 1.6rem; }
