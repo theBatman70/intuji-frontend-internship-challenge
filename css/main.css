@@ -11,6 +11,17 @@ body {
   background-color: #fafbff;
   overflow-x: hidden; }
 
+.company-name, footer div .section-title {
+  font-size: 2rem;
+  font-weight: 800; }
+
+.btn-cta, footer .newsletter-cta div .btn-newsletter-cta, .hero .hero-box .hero-text-box .hero-btns .btn-cta, .hero .hero-box .hero-text-box .hero-btns footer .newsletter-cta div .btn-newsletter-cta, footer .newsletter-cta div .hero .hero-box .hero-text-box .hero-btns .btn-newsletter-cta {
+  background-color: #3734a9;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 1.6rem 3.8rem;
+  border-radius: 40px; }
+
 .heading-primary {
   font-size: 7rem;
   line-height: 1.15;
@@ -20,7 +31,7 @@ body {
 .heading-secondary {
   font-size: 5.6rem;
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 1.2;
   letter-spacing: -2px; }
 
 .heading-secondary-sm {
@@ -44,53 +55,105 @@ body {
 
 .subtitle-md {
   font-size: 1.6rem;
+  line-height: 1.6;
   width: 50%;
   margin-bottom: 5rem; }
+
+.text-normal16, footer .newsletter-cta .newsletter-info-sm {
+  font-size: 1.6rem;
+  line-height: 1.5; }
 
 .container {
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 3.2rem; }
 
-.testimonial-box, .testimonial-box-lg {
+.testimonial-box, .testimonials .content-box .testimonial-box-lg {
   position: relative;
   height: auto;
   border-radius: 20px;
   background-color: rgba(196, 196, 196, 0.3);
   padding-block: 3.8rem 3.2rem;
   padding-inline: 3.4rem; }
-  .testimonial-box .quotation-logo, .testimonial-box-lg .quotation-logo {
+  .testimonial-box .quotation-logo, .testimonials .content-box .testimonial-box-lg .quotation-logo {
     top: 0;
     position: absolute;
     left: 3.4rem;
     transform: translateY(-50%); }
-  .testimonial-box p, .testimonial-box-lg p {
+  .testimonial-box p, .testimonials .content-box .testimonial-box-lg p {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.8rem; }
-  .testimonial-box span, .testimonial-box-lg span {
+  .testimonial-box span, .testimonials .content-box .testimonial-box-lg span {
     font-size: 1.4rem; }
 
-.testimonial-box-lg {
-  background-color: #fff;
-  outline: 1px solid #cfcfcf;
-  border-radius: 5px;
-  display: flex;
-  gap: 2.6rem;
-  width: 70rem;
-  overflow: visible; }
-  .testimonial-box-lg .text-box {
-    width: 60%; }
-    .testimonial-box-lg .text-box p {
-      font-size: 2.4rem;
-      font-weight: 600;
-      margin-bottom: 1.8rem; }
-    .testimonial-box-lg .text-box span {
-      font-size: 2rem; }
-  .testimonial-box-lg .author-img {
-    width: 40%; }
+.cta {
+  padding-block: 15rem; }
+  .cta .cta-box {
+    background-image: url(/assets/design-elements/cta-background.png);
+    height: 43.8rem;
+    display: flex;
+    align-items: center; }
+    .cta .cta-box div {
+      width: 60%;
+      margin: 0 auto;
+      text-align: center; }
+      .cta .cta-box div h2 {
+        color: #fff;
+        margin-bottom: 4rem; }
+      .cta .cta-box div .btn-cta, .cta .cta-box footer .newsletter-cta div .btn-newsletter-cta, footer .newsletter-cta .cta .cta-box div .btn-newsletter-cta, .cta .cta-box div .hero .hero-box .hero-text-box .hero-btns .btn-cta, .hero .hero-box .hero-text-box .hero-btns .cta .cta-box div .btn-cta, .cta .cta-box .hero .hero-box .hero-text-box .hero-btns footer .newsletter-cta div .btn-newsletter-cta, .hero .hero-box .hero-text-box .hero-btns footer .newsletter-cta .cta .cta-box div .btn-newsletter-cta, .cta .cta-box footer .newsletter-cta div .hero .hero-box .hero-text-box .hero-btns .btn-newsletter-cta, footer .newsletter-cta .cta .cta-box div .hero .hero-box .hero-text-box .hero-btns .btn-newsletter-cta {
+        padding: 1.8rem 4.2rem;
+        background-color: #ff7f5c;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 500;
+        border-radius: 10px; }
 
-.btn-reformat, .hero button, .recent-blogs button, .faqs .faq-interface .faq-list .faq button {
+footer {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr 2fr;
+  row-gap: 5.8rem; }
+  footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.8rem; }
+    footer div .section-title {
+      margin-bottom: 2.4rem;
+      text-transform: capitalize; }
+    footer div .text-normal16, footer div .newsletter-cta .newsletter-info-sm, footer .newsletter-cta div .newsletter-info-sm {
+      text-transform: capitalize; }
+  footer .about-company {
+    margin-right: 7.6rem; }
+    footer .about-company .company-subtitle {
+      color: #757095;
+      font-size: 1.6rem; }
+    footer .about-company .socials {
+      display: flex;
+      gap: 1.6rem; }
+  footer .newsletter-cta div {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    height: 5.2rem; }
+    footer .newsletter-cta div input {
+      padding: 1.5rem;
+      background-color: #eeeeff;
+      border: none;
+      height: 100%; }
+    footer .newsletter-cta div .btn-newsletter-cta {
+      border-radius: 0;
+      height: 100%; }
+  footer .newsletter-cta .newsletter-info-sm {
+    color: #181433; }
+  footer .copyright {
+    border-top: 2px solid #e5e5ea;
+    text-align: center;
+    padding-block: 4rem 5.8rem;
+    grid-column: span 4;
+    font-size: 1.6rem; }
+
+.btn-reformat, button, .hero button, .recent-blogs button, .faqs .container .faq-interface .faq-list .faq button, .faqs .container button {
   border: none;
   background: none;
   cursor: pointer; }
@@ -117,6 +180,17 @@ body {
   background-color: #fafbff;
   overflow-x: hidden; }
 
+.company-name, footer div .section-title {
+  font-size: 2rem;
+  font-weight: 800; }
+
+.btn-cta, footer .newsletter-cta div .btn-newsletter-cta, .hero .hero-box .hero-text-box .hero-btns .btn-cta, .hero .hero-box .hero-text-box .hero-btns footer .newsletter-cta div .btn-newsletter-cta, footer .newsletter-cta div .hero .hero-box .hero-text-box .hero-btns .btn-newsletter-cta {
+  background-color: #3734a9;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 1.6rem 3.8rem;
+  border-radius: 40px; }
+
 .heading-primary {
   font-size: 7rem;
   line-height: 1.15;
@@ -126,7 +200,7 @@ body {
 .heading-secondary {
   font-size: 5.6rem;
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 1.2;
   letter-spacing: -2px; }
 
 .heading-secondary-sm {
@@ -150,53 +224,105 @@ body {
 
 .subtitle-md {
   font-size: 1.6rem;
+  line-height: 1.6;
   width: 50%;
   margin-bottom: 5rem; }
+
+.text-normal16, footer .newsletter-cta .newsletter-info-sm {
+  font-size: 1.6rem;
+  line-height: 1.5; }
 
 .container {
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 3.2rem; }
 
-.testimonial-box, .testimonial-box-lg {
+.testimonial-box, .testimonials .content-box .testimonial-box-lg {
   position: relative;
   height: auto;
   border-radius: 20px;
   background-color: rgba(196, 196, 196, 0.3);
   padding-block: 3.8rem 3.2rem;
   padding-inline: 3.4rem; }
-  .testimonial-box .quotation-logo, .testimonial-box-lg .quotation-logo {
+  .testimonial-box .quotation-logo, .testimonials .content-box .testimonial-box-lg .quotation-logo {
     top: 0;
     position: absolute;
     left: 3.4rem;
     transform: translateY(-50%); }
-  .testimonial-box p, .testimonial-box-lg p {
+  .testimonial-box p, .testimonials .content-box .testimonial-box-lg p {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.8rem; }
-  .testimonial-box span, .testimonial-box-lg span {
+  .testimonial-box span, .testimonials .content-box .testimonial-box-lg span {
     font-size: 1.4rem; }
 
-.testimonial-box-lg {
-  background-color: #fff;
-  outline: 1px solid #cfcfcf;
-  border-radius: 5px;
-  display: flex;
-  gap: 2.6rem;
-  width: 70rem;
-  overflow: visible; }
-  .testimonial-box-lg .text-box {
-    width: 60%; }
-    .testimonial-box-lg .text-box p {
-      font-size: 2.4rem;
-      font-weight: 600;
-      margin-bottom: 1.8rem; }
-    .testimonial-box-lg .text-box span {
-      font-size: 2rem; }
-  .testimonial-box-lg .author-img {
-    width: 40%; }
+.cta {
+  padding-block: 15rem; }
+  .cta .cta-box {
+    background-image: url(/assets/design-elements/cta-background.png);
+    height: 43.8rem;
+    display: flex;
+    align-items: center; }
+    .cta .cta-box div {
+      width: 60%;
+      margin: 0 auto;
+      text-align: center; }
+      .cta .cta-box div h2 {
+        color: #fff;
+        margin-bottom: 4rem; }
+      .cta .cta-box div .btn-cta, .cta .cta-box footer .newsletter-cta div .btn-newsletter-cta, footer .newsletter-cta .cta .cta-box div .btn-newsletter-cta, .cta .cta-box div .hero .hero-box .hero-text-box .hero-btns .btn-cta, .hero .hero-box .hero-text-box .hero-btns .cta .cta-box div .btn-cta, .cta .cta-box .hero .hero-box .hero-text-box .hero-btns footer .newsletter-cta div .btn-newsletter-cta, .hero .hero-box .hero-text-box .hero-btns footer .newsletter-cta .cta .cta-box div .btn-newsletter-cta, .cta .cta-box footer .newsletter-cta div .hero .hero-box .hero-text-box .hero-btns .btn-newsletter-cta, footer .newsletter-cta .cta .cta-box div .hero .hero-box .hero-text-box .hero-btns .btn-newsletter-cta {
+        padding: 1.8rem 4.2rem;
+        background-color: #ff7f5c;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 500;
+        border-radius: 10px; }
 
-.btn-reformat, .hero button, .recent-blogs button, .faqs .faq-interface .faq-list .faq button {
+footer {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr 2fr;
+  row-gap: 5.8rem; }
+  footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.8rem; }
+    footer div .section-title {
+      margin-bottom: 2.4rem;
+      text-transform: capitalize; }
+    footer div .text-normal16, footer div .newsletter-cta .newsletter-info-sm, footer .newsletter-cta div .newsletter-info-sm {
+      text-transform: capitalize; }
+  footer .about-company {
+    margin-right: 7.6rem; }
+    footer .about-company .company-subtitle {
+      color: #757095;
+      font-size: 1.6rem; }
+    footer .about-company .socials {
+      display: flex;
+      gap: 1.6rem; }
+  footer .newsletter-cta div {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    height: 5.2rem; }
+    footer .newsletter-cta div input {
+      padding: 1.5rem;
+      background-color: #eeeeff;
+      border: none;
+      height: 100%; }
+    footer .newsletter-cta div .btn-newsletter-cta {
+      border-radius: 0;
+      height: 100%; }
+  footer .newsletter-cta .newsletter-info-sm {
+    color: #181433; }
+  footer .copyright {
+    border-top: 2px solid #e5e5ea;
+    text-align: center;
+    padding-block: 4rem 5.8rem;
+    grid-column: span 4;
+    font-size: 1.6rem; }
+
+.btn-reformat, button, .hero button, .recent-blogs button, .faqs .container .faq-interface .faq-list .faq button, .faqs .container button {
   border: none;
   background: none;
   cursor: pointer; }
@@ -211,15 +337,27 @@ body {
   grid-template-columns: repeat(2, 1fr); }
 
 .hero {
-  background: linear-gradient(to right, #c9e7f2, #62bada); }
+  background: linear-gradient(to right, #c9e7f2, #62bada);
+  position: relative;
+  overflow-y: hidden; }
+  .hero .design-dots {
+    position: absolute;
+    bottom: 5rem;
+    z-index: 1; }
+  .hero .design-crosses {
+    position: absolute;
+    right: 0;
+    top: 15rem;
+    z-index: 1; }
+  .hero .design-paint-mark {
+    position: absolute;
+    right: 0;
+    bottom: -15rem; }
   .hero header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 3.8rem 2.4rem; }
-    .hero header .company-name {
-      font-size: 2rem;
-      font-weight: 600; }
     .hero header nav {
       display: flex;
       gap: 2.6rem; }
@@ -236,21 +374,23 @@ body {
       display: flex;
       gap: 5rem; }
       .hero header .sign-in-btns .btn-start-free {
-        background-color: #4f46ba;
+        background-color: #3734a9;
         color: #fff;
         padding: 1.6rem 3.6rem; }
   .hero .hero-box {
     display: flex;
     overflow: hidden;
-    height: 100vh; }
+    height: 85vh;
+    gap: 4rem; }
     .hero .hero-box .hero-text-box {
-      flex: 1;
-      align-self: center; }
+      align-self: center;
+      z-index: 9; }
       .hero .hero-box .hero-text-box .hero-title {
         font-size: 6rem;
-        font-weight: bold;
+        font-weight: 800;
         margin-bottom: 2.4rem;
-        line-height: 1.2; }
+        line-height: 1.2;
+        width: 120%; }
       .hero .hero-box .hero-text-box .hero-subtitle {
         font-size: 2rem;
         font-weight: normal;
@@ -261,12 +401,6 @@ body {
         align-items: center;
         gap: 5rem;
         margin-bottom: 5.4rem; }
-        .hero .hero-box .hero-text-box .hero-btns .btn-cta {
-          background-color: #3734a9;
-          color: #fff;
-          font-size: 1.6rem;
-          padding: 1.6rem 3.8rem;
-          border-radius: 40px; }
         .hero .hero-box .hero-text-box .hero-btns .btn-see-how-it-works {
           display: flex;
           align-items: center;
@@ -282,7 +416,8 @@ body {
             justify-content: center; }
       .hero .hero-box .hero-text-box .tags {
         display: flex;
-        gap: 2.4rem; }
+        gap: 2.4rem;
+        z-index: 2; }
         .hero .hero-box .hero-text-box .tags span {
           display: flex;
           align-items: center;
@@ -290,8 +425,8 @@ body {
           color: #757095;
           font-size: 1.7rem; }
     .hero .hero-box .hero-img-box {
-      flex: 1;
-      position: relative; }
+      position: relative;
+      z-index: 9; }
       .hero .hero-box .hero-img-box .img-banking-solution {
         display: flex;
         align-items: center;
@@ -369,7 +504,7 @@ body {
           margin-bottom: 2rem; }
         .feature-blocks .top-feature .feature-head .title-box span {
           font-size: 1.6rem; }
-      .feature-blocks .top-feature .feature-head .testimonial-box, .feature-blocks .top-feature .feature-head .testimonial-box-lg {
+      .feature-blocks .top-feature .feature-head .testimonial-box, .feature-blocks .top-feature .feature-head .testimonials .content-box .testimonial-box-lg, .testimonials .content-box .feature-blocks .top-feature .feature-head .testimonial-box-lg {
         width: 35%; }
     .feature-blocks .top-feature .cards-box {
       column-gap: 3.2rem; }
@@ -377,7 +512,8 @@ body {
         background-color: #fff;
         border-radius: 20px;
         outline: 1px solid #dbe4e9;
-        padding: 2.2rem; }
+        padding: 2.2rem;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05); }
         .feature-blocks .top-feature .cards-box .card .number {
           font-size: 2.2rem;
           font-weight: 700; }
@@ -403,8 +539,6 @@ body {
   .feature-blocks .feature-block {
     display: flex;
     align-items: center; }
-    .feature-blocks .feature-block .feature-image {
-      max-width: 55%; }
     .feature-blocks .feature-block .text-box .subtitle, .feature-blocks .feature-block .text-box .tags {
       font-size: 1.8rem;
       color: #64607d;
@@ -418,14 +552,34 @@ body {
       gap: 1.4rem;
       align-items: center;
       margin-bottom: 1.4rem; }
-    .feature-blocks .feature-block .text-box .testimonial-box, .feature-blocks .feature-block .text-box .testimonial-box-lg {
+    .feature-blocks .feature-block .text-box .testimonial-box, .feature-blocks .feature-block .text-box .testimonials .content-box .testimonial-box-lg, .testimonials .content-box .feature-blocks .feature-block .text-box .testimonial-box-lg {
       width: 80%; }
   .feature-blocks .track-payments {
-    margin-bottom: 4rem; }
+    margin-bottom: 4rem;
+    flex-basis: 0 0 auto; }
+    .feature-blocks .track-payments .img-box {
+      position: relative; }
+      .feature-blocks .track-payments .img-box .design-sm-circles {
+        position: absolute;
+        top: -3rem;
+        right: 8rem;
+        z-index: 9; }
+      .feature-blocks .track-payments .img-box .feature-image {
+        width: 100%;
+        display: block; }
+    .feature-blocks .track-payments .text-box {
+      width: 50%; }
+  .feature-blocks .save-money .feature-image {
+    max-width: 55%; }
 
 .highlighted-features {
   background-color: #c9e7f2;
-  padding: 14.6rem; }
+  padding: 14.6rem;
+  position: relative; }
+  .highlighted-features .design-dashes {
+    position: absolute;
+    bottom: 11rem;
+    left: 0; }
   .highlighted-features .content-box .cards-box {
     gap: 3.2rem; }
     .highlighted-features .content-box .cards-box .card {
@@ -440,9 +594,9 @@ body {
         width: 5.5rem; }
       .highlighted-features .content-box .cards-box .card span {
         font-weight: 800;
-        margin-bottom: 1.6rem;
         font-size: 2.2rem; }
       .highlighted-features .content-box .cards-box .card p {
+        margin-top: 1.6rem;
         font-size: 1.5rem; }
     .highlighted-features .content-box .cards-box .card:nth-child(1),
     .highlighted-features .content-box .cards-box .card:nth-child(2) {
@@ -451,25 +605,36 @@ body {
     .highlighted-features .content-box .cards-box .card:nth-child(4) {
       grid-column: 3;
       padding-block: 3rem; }
-      .highlighted-features .content-box .cards-box .card:nth-child(3) span,
-      .highlighted-features .content-box .cards-box .card:nth-child(4) span {
-        margin-bottom: 0; }
 
 .testimonials {
-  padding-block: 14.6rem;
-  margin-bottom: 40rem; }
-  .testimonials div {
-    position: relative;
-    height: auto; }
-    .testimonials div .head {
+  padding-block: 14.6rem; }
+  .testimonials .head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5.2rem; }
+  .testimonials .content-box {
+    display: flex;
+    gap: 4.2rem;
+    padding: 4rem 5.2rem 3.2rem 12rem;
+    overflow-x: scroll; }
+    .testimonials .content-box .testimonial-box-lg {
+      background-color: #fff;
+      outline: 1px solid #cfcfcf;
+      border-radius: 5px;
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 5.2rem; }
-    .testimonials div .content-box {
-      display: flex;
-      gap: 4.2rem;
-      position: absolute;
-      width: auto; }
+      gap: 2.6rem;
+      width: 70rem;
+      flex: 0 0 auto; }
+      .testimonials .content-box .testimonial-box-lg .text-box {
+        width: 60%; }
+        .testimonials .content-box .testimonial-box-lg .text-box p {
+          font-size: 2.4rem;
+          font-weight: 600;
+          margin-bottom: 1.8rem; }
+        .testimonials .content-box .testimonial-box-lg .text-box span {
+          font-size: 2rem; }
+      .testimonials .content-box .testimonial-box-lg .author-img {
+        width: 40%; }
 
 .stats {
   background-color: #3734a9; }
@@ -525,16 +690,18 @@ body {
         font-weight: 500;
         gap: 1.6rem;
         margin-top: 6.8rem; }
-  .recent-blogs .blog .text-box {
-    padding-block: 3.4rem 5.2rem;
-    padding-inline: 2.8rem;
-    display: flex;
-    flex-direction: column; }
-    .recent-blogs .blog .text-box .label {
-      color: #000; }
-    .recent-blogs .blog .text-box .title {
-      font-size: 2.8rem;
-      font-weight: 600; }
+  .recent-blogs .blog {
+    cursor: pointer; }
+    .recent-blogs .blog .text-box {
+      padding-block: 3.4rem 5.2rem;
+      padding-inline: 2.8rem;
+      display: flex;
+      flex-direction: column; }
+      .recent-blogs .blog .text-box .label {
+        color: #000; }
+      .recent-blogs .blog .text-box .title {
+        font-size: 2.8rem;
+        font-weight: 600; }
   .recent-blogs .blogs-grid {
     gap: 2.8rem; }
     .recent-blogs .blogs-grid .blog {
@@ -544,28 +711,76 @@ body {
       .recent-blogs .blogs-grid .blog img {
         width: 100%; }
 
-.faqs h2 {
-  width: 50%; }
-
-.faqs .faq-interface {
-  display: grid;
-  grid-template-columns: 2fr 1fr; }
-  .faqs .faq-interface .faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem; }
-    .faqs .faq-interface .faq-list .faq {
+.faqs {
+  position: relative; }
+  .faqs .design-star-drawing {
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .faqs .design-whirlpool {
+    position: absolute;
+    left: 0;
+    top: 5rem; }
+  .faqs .container h2 {
+    width: 50%; }
+  .faqs .container .faq-interface {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 3.2rem; }
+    .faqs .container .faq-interface .faq-list {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      gap: 1.6rem; }
+      .faqs .container .faq-interface .faq-list .faq {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #cfcfcf;
+        border-radius: 5px;
+        padding: 2.4rem;
+        background-color: #fff;
+        align-items: start;
+        cursor: pointer; }
+        .faqs .container .faq-interface .faq-list .faq .text-box {
+          display: flex;
+          flex-direction: column;
+          width: 90%; }
+          .faqs .container .faq-interface .faq-list .faq .text-box span {
+            font-size: 2.2rem;
+            font-weight: 800; }
+          .faqs .container .faq-interface .faq-list .faq .text-box .answer {
+            font-size: 1.6rem;
+            margin-top: 2.4rem;
+            display: none; }
+        .faqs .container .faq-interface .faq-list .faq button {
+          color: #3d3d3d;
+          font-size: 4rem; }
+      .faqs .container .faq-interface .faq-list .faq:first-of-type .answer {
+        display: block; }
+    .faqs .container .faq-interface .faq-cta-box {
+      padding-block: 6.7rem 3.2rem;
+      padding-inline: 3.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       border: 1px solid #cfcfcf;
       border-radius: 5px;
-      padding: 2.4rem;
-      background-color: #fff; }
-      .faqs .faq-interface .faq-list .faq .text-box {
-        display: flex;
-        flex-direction: column; }
-        .faqs .faq-interface .faq-list .faq .text-box span {
-          font-size: 2.2rem;
-          font-weight: 800; }
-        .faqs .faq-interface .faq-list .faq .text-box p {
-          font-size: 1.6rem; }
+      height: 51.2rem; }
+      .faqs .container .faq-interface .faq-cta-box img {
+        margin-bottom: 4.2rem; }
+      .faqs .container .faq-interface .faq-cta-box h4 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 2.2rem; }
+      .faqs .container .faq-interface .faq-cta-box .text-normal16, .faqs .container .faq-interface .faq-cta-box footer .newsletter-cta .newsletter-info-sm, footer .newsletter-cta .faqs .container .faq-interface .faq-cta-box .newsletter-info-sm {
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-align: center; }
+      .faqs .container .faq-interface .faq-cta-box button {
+        margin-top: auto;
+        padding-block: 2.2rem;
+        padding-inline: 8rem;
+        font-size: 1.6rem;
+        color: #fff;
+        background-color: #ff7f5c; }

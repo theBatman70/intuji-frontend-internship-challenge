@@ -1,40 +1,112 @@
 .faqs {
-  h2 {
-    width: 50%;
+  position: relative;
+
+  .design-star-drawing {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
-  .faq-interface {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+  .design-whirlpool {
+    position: absolute;
+    left: 0;
+    top: 5rem;
+  }
 
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.6rem;
+  .container {
+    h2 {
+      width: 50%;
+    }
 
-      .faq {
+    .faq-interface {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      column-gap: 3.2rem;
+
+      .faq-list {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        .faq {
+          display: flex;
+          justify-content: space-between;
+          border: 1px solid #cfcfcf;
+          border-radius: 5px;
+          padding: 2.4rem;
+          background-color: $primary-white;
+          align-items: start;
+          cursor: pointer;
+          .text-box {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            span {
+              font-size: 2.2rem;
+              font-weight: 800;
+            }
+            .answer {
+              font-size: $fs-md;
+              margin-top: 2.4rem;
+              display: none;
+            }
+          }
+
+          button {
+            @extend .btn-reformat;
+            color: #3d3d3d;
+            font-size: 4rem;
+          }
+        }
+
+        .faq:first-of-type {
+          .answer {
+            display: block;
+          }
+        }
+      }
+
+      .faq-cta-box {
+        padding-block: 6.7rem 3.2rem;
+        padding-inline: 3.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         border: 1px solid #cfcfcf;
         border-radius: 5px;
-        padding: 2.4rem;
-        background-color: $primary-white;
-        .text-box {
-          display: flex;
-          flex-direction: column;
-          span {
-            font-size: 2.2rem;
-            font-weight: 800;
-          }
-          p {
-            font-size: 1.6rem;
-          }
+        height: 51.2rem;
+
+        img {
+          margin-bottom: 4.2rem;
+        }
+
+        h4 {
+          font-size: 2.2rem;
+          font-weight: 800;
+          text-align: center;
+          margin-bottom: 2.2rem;
+        }
+
+        .text-normal16 {
+          font-size: 1.6rem;
+          font-weight: 600;
+          text-align: center;
         }
 
         button {
-          @extend .btn-reformat;
+          margin-top: auto;
+          padding-block: 2.2rem;
+          padding-inline: 8rem;
+          font-size: $fs-md;
+          color: $primary-white;
+          background-color: #ff7f5c;
         }
       }
+    }
+
+    button {
+      @extend .btn-reformat;
     }
   }
 }

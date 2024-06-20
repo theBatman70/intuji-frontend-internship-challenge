@@ -1,6 +1,13 @@
 .highlighted-features {
   background-color: $subtle-blue;
   padding: $padding-block-section-lg;
+  position: relative;
+
+  .design-dashes {
+    position: absolute;
+    bottom: 11rem;
+    left: 0;
+  }
 
   .content-box {
     .cards-box {
@@ -18,10 +25,10 @@
         }
         span {
           font-weight: 800;
-          margin-bottom: 1.6rem;
           font-size: 2.2rem;
         }
         p {
+          margin-top: 1.6rem;
           font-size: $fs-sm;
         }
       }
@@ -35,9 +42,6 @@
       .card:nth-child(4) {
         grid-column: 3;
         padding-block: 3rem;
-        span {
-          margin-bottom: 0;
-        }
       }
     }
   }

@@ -1,20 +1,43 @@
 .testimonials {
   padding-block: $padding-block-section-lg;
-  margin-bottom: 40rem;
-  div {
-    position: relative;
-    height: auto;
-    .head {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 5.2rem;
-    }
+  .head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5.2rem;
+  }
 
-    .content-box {
+  .content-box {
+    display: flex;
+    gap: 4.2rem;
+    padding: 4rem 5.2rem 3.2rem 12rem;
+    overflow-x: scroll;
+
+    .testimonial-box-lg {
+      @extend .testimonial-box;
+      background-color: $primary-white;
+      outline: 1px solid #cfcfcf;
+      border-radius: 5px;
       display: flex;
-      gap: 4.2rem;
-      position: absolute;
-      width: auto;
+      gap: 2.6rem;
+      width: 70rem;
+      flex: 0 0 auto;
+
+      .text-box {
+        width: 60%;
+        p {
+          font-size: 2.4rem;
+          font-weight: 600;
+          margin-bottom: 1.8rem;
+        }
+
+        span {
+          font-size: 2rem;
+        }
+      }
+
+      .author-img {
+        width: 40%;
+      }
     }
   }
 }

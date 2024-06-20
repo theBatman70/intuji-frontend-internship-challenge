@@ -3,6 +3,25 @@
 
 .hero {
   background: linear-gradient(to right, #c9e7f2, #62bada);
+  position: relative;
+  overflow-y: hidden;
+
+  .design-dots {
+    position: absolute;
+    bottom: 5rem;
+    z-index: 1;
+  }
+  .design-crosses {
+    position: absolute;
+    right: 0;
+    top: 15rem;
+    z-index: 1;
+  }
+  .design-paint-mark {
+    position: absolute;
+    right: 0;
+    bottom: -15rem;
+  }
 
   button {
     @extend .btn-reformat;
@@ -13,11 +32,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 3.8rem 2.4rem;
-
-    .company-name {
-      font-size: 2rem;
-      font-weight: 600;
-    }
 
     nav {
       display: flex;
@@ -43,7 +57,7 @@
       gap: 5rem;
 
       .btn-start-free {
-        background-color: #4f46ba;
+        background-color: #3734a9;
         color: $primary-white;
         padding: 1.6rem 3.6rem;
       }
@@ -53,17 +67,18 @@
   .hero-box {
     display: flex;
     overflow: hidden;
-    height: 100vh;
-    // align-items: center;
+    height: 85vh;
+    gap: 4rem;
 
     .hero-text-box {
-      flex: 1;
       align-self: center;
+      z-index: 9;
       .hero-title {
         font-size: $fs-hero-title;
-        font-weight: bold;
+        font-weight: 800;
         margin-bottom: 2.4rem;
         line-height: 1.2;
+        width: 120%;
       }
 
       .hero-subtitle {
@@ -81,11 +96,7 @@
         margin-bottom: 5.4rem;
 
         .btn-cta {
-          background-color: $deep-blue;
-          color: $primary-white;
-          font-size: $fs-md;
-          padding: 1.6rem 3.8rem;
-          border-radius: 40px;
+          @extend .btn-cta;
         }
 
         .btn-see-how-it-works {
@@ -107,6 +118,7 @@
       .tags {
         display: flex;
         gap: 2.4rem;
+        z-index: 2;
         span {
           display: flex;
           align-items: center;
@@ -118,10 +130,9 @@
     }
 
     .hero-img-box {
-      flex: 1;
       position: relative;
+      z-index: 9;
       .img-banking-solution {
-        // align-self: flex-start;
         display: flex;
         align-items: center;
         z-index: 1;

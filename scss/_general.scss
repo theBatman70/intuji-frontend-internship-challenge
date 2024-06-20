@@ -16,6 +16,19 @@ body {
   overflow-x: hidden;
 }
 
+.company-name {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.btn-cta {
+  background-color: $deep-blue;
+  color: $primary-white;
+  font-size: $fs-md;
+  padding: 1.6rem 3.8rem;
+  border-radius: 40px;
+}
+
 .heading-primary {
   font-size: 7rem;
   line-height: 1.15;
@@ -25,7 +38,7 @@ body {
 .heading-secondary {
   font-size: 5.6rem;
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 1.2;
   letter-spacing: -2px;
 }
 .heading-secondary-sm {
@@ -51,8 +64,14 @@ body {
 
 .subtitle-md {
   font-size: $fs-md;
+  line-height: 1.6;
   width: 50%;
   margin-bottom: 5rem;
+}
+
+.text-normal16 {
+  font-size: $fs-md;
+  line-height: 1.5;
 }
 
 .container {
@@ -87,31 +106,98 @@ body {
   }
 }
 
-.testimonial-box-lg {
-  @extend .testimonial-box;
-  background-color: $primary-white;
-  outline: 1px solid #cfcfcf;
-  border-radius: 5px;
-  display: flex;
-  gap: 2.6rem;
-  width: 70rem;
-  overflow: visible;
+.cta {
+  padding-block: 15rem;
+  .cta-box {
+    background-image: url(/assets/design-elements/cta-background.png);
+    height: 43.8rem;
+    display: flex;
+    align-items: center;
 
-  .text-box {
-    width: 60%;
-    p {
-      font-size: 2.4rem;
-      font-weight: 600;
-      margin-bottom: 1.8rem;
+    div {
+      width: 60%;
+      margin: 0 auto;
+      text-align: center;
+
+      h2 {
+        color: $primary-white;
+        margin-bottom: 4rem;
+      }
+      .btn-cta {
+        padding: 1.8rem 4.2rem;
+        background-color: #ff7f5c;
+        color: $primary-white;
+        font-size: 1.8rem;
+        font-weight: 500;
+        border-radius: 10px;
+      }
     }
+  }
+}
 
-    span {
-      font-size: 2rem;
+footer {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr 2fr;
+  row-gap: 5.8rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.8rem;
+    .section-title {
+      @extend .company-name;
+      margin-bottom: 2.4rem;
+      text-transform: capitalize;
+    }
+    .text-normal16 {
+      text-transform: capitalize;
     }
   }
 
-  .author-img {
-    width: 40%;
+  .about-company {
+    margin-right: 7.6rem;
+    .company-subtitle {
+      color: #757095;
+      font-size: $fs-md;
+    }
+    .socials {
+      display: flex;
+      gap: 1.6rem;
+    }
+  }
+  .newsletter-cta {
+    div {
+      display: flex;
+      flex-direction: row;
+      gap: 0;
+      height: 5.2rem;
+      input {
+        padding: 1.5rem;
+        background-color: #eeeeff;
+        border: none;
+        height: 100%;
+      }
+
+      .btn-newsletter-cta {
+        @extend .btn-cta;
+        border-radius: 0;
+        height: 100%;
+      }
+    }
+
+    .newsletter-info-sm {
+      @extend .text-normal16;
+      color: #181433;
+    }
+  }
+
+  .copyright {
+    border-top: 2px solid #e5e5ea;
+    text-align: center;
+    padding-block: 4rem 5.8rem;
+    grid-column: span 4;
+    font-size: $fs-md;
   }
 }
 
@@ -119,6 +205,10 @@ body {
   border: none;
   background: none;
   cursor: pointer;
+}
+
+button {
+  @extend .btn-reformat;
 }
 
 .grid {
