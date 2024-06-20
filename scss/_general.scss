@@ -29,6 +29,21 @@ body {
   border-radius: 40px;
 }
 
+.hero-title {
+  font-size: $fs-hero-title;
+  font-weight: 800;
+  margin-bottom: 2.4rem;
+  line-height: 1.2;
+  width: 120%;
+}
+
+.hero-subtitle {
+  font-size: $fs-hero-subtitle;
+  font-weight: normal;
+  color: $text-light-gray;
+  // margin-bottom: 5.6rem;
+}
+
 .heading-primary {
   font-size: 7rem;
   line-height: 1.15;
@@ -80,6 +95,13 @@ body {
   padding: 0 3.2rem;
 }
 
+.padding-block-lg {
+  padding-block: 14.6rem;
+}
+.padding-block-md {
+  padding-block: 7.2rem;
+}
+
 .testimonial-box {
   position: relative;
   height: auto;
@@ -107,7 +129,6 @@ body {
 }
 
 .cta {
-  padding-block: 15rem;
   .cta-box {
     background-image: url(/assets/design-elements/cta-background.png);
     height: 43.8rem;
@@ -139,11 +160,32 @@ footer {
   display: grid;
   grid-template-columns: 1.25fr 1fr 1fr 2fr;
   row-gap: 5.8rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 64em) {
+    grid-template-columns: 1.25fr 1fr 1fr;
+    div:nth-child(4) {
+      grid-row: 2;
+    }
+  }
+  @media (max-width: 48em) {
+    grid-template-columns: 1fr;
+    div:nth-child(2) {
+      grid-row: 2;
+    }
+    div:nth-child(3) {
+      grid-row: 3;
+    }
+    div:nth-child(4) {
+      grid-row: 4;
+    }
+  }
 
   div {
     display: flex;
     flex-direction: column;
     align-items: start;
+
     gap: 1.8rem;
     .section-title {
       @extend .company-name;
@@ -219,4 +261,78 @@ button {
 }
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
+}
+
+// 1160px
+@media (max-width: 72em) {
+  .hero-title {
+    font-size: $fs-hero-title-md;
+  }
+}
+
+@media (max-width: 64em) {
+  .grid--3-cols {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3.2rem;
+  }
+}
+
+@media (max-width: 56em) {
+  .hero-title {
+    font-size: $fs-hero-title-sm;
+  }
+  .heading-primary {
+    font-size: 5rem;
+  }
+  .heading-secondary-sm {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .grid--3-cols {
+    grid-template-columns: 1fr;
+    row-gap: 3.2rem;
+  }
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    text-align: center;
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .heading-primary {
+    font-size: 5rem;
+  }
+  .heading-secondary {
+    font-size: 4.6rem;
+  }
+
+  .heading-secondary-sm {
+    font-size: 3.2rem;
+  }
+
+  .subtitle-md {
+    width: 100%;
+  }
+
+  .padding-block-lg {
+    padding-block: 7.2rem;
+  }
+  .padding-block-md {
+    padding-block: 3.2rem;
+  }
+}
+
+@media (max-width: 29.625em) {
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.8rem;
+  }
 }

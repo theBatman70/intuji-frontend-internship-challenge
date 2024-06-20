@@ -37,6 +37,10 @@
       display: flex;
       gap: 2.6rem;
 
+      @media (max-width: 48rem) {
+        display: none;
+      }
+
       .btn-dropdown {
         display: flex;
         align-items: center;
@@ -70,23 +74,18 @@
     height: 85vh;
     gap: 4rem;
 
+    @media (max-width: 48rem) {
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 8rem;
+    }
+
     .hero-text-box {
       align-self: center;
       z-index: 9;
-      .hero-title {
-        font-size: $fs-hero-title;
-        font-weight: 800;
-        margin-bottom: 2.4rem;
-        line-height: 1.2;
-        width: 120%;
-      }
-
-      .hero-subtitle {
-        font-size: $fs-hero-subtitle;
-        font-weight: normal;
-        color: $text-light-gray;
-        // margin-bottom: 5.6rem;
-      }
 
       .hero-btns {
         margin-top: 5.6rem;
@@ -132,6 +131,11 @@
     .hero-img-box {
       position: relative;
       z-index: 9;
+      // 1160px
+      @media (max-width: 72em) {
+        width: 45%;
+      }
+
       .img-banking-solution {
         display: flex;
         align-items: center;
@@ -156,9 +160,10 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          padding: 3.4rem;
           background-color: #454545;
           border-radius: 50%;
-          width: 11.9rem;
+          width: 11.9rem !important;
           height: 11.9rem;
           transform: translateX(-235%);
         }

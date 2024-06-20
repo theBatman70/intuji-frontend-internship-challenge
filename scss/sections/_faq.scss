@@ -5,23 +5,30 @@
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 1;
   }
 
   .design-whirlpool {
     position: absolute;
     left: 0;
     top: 5rem;
+    z-index: 1;
   }
 
   .container {
     h2 {
       width: 50%;
+      z-index: 9;
     }
 
     .faq-interface {
       display: grid;
       grid-template-columns: 2fr 1fr;
-      column-gap: 3.2rem;
+      gap: 3.2rem;
+
+      @media (max-width: 64em) {
+        grid-template-columns: 1fr;
+      }
 
       .faq-list {
         display: flex;
@@ -77,6 +84,10 @@
         border-radius: 5px;
         height: 51.2rem;
 
+        @media (max-width: 64em) {
+          height: auto;
+        }
+
         img {
           margin-bottom: 4.2rem;
         }
@@ -92,6 +103,7 @@
           font-size: 1.6rem;
           font-weight: 600;
           text-align: center;
+          margin-bottom: 3.2rem;
         }
 
         button {

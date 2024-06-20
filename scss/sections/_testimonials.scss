@@ -1,9 +1,18 @@
 .testimonials {
-  padding-block: $padding-block-section-lg;
   .head {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5.2rem;
+
+    @media (max-width: 48em) {
+      flex-direction: column;
+      gap: 3.2rem;
+
+      img {
+        width: 30%;
+        align-self: flex-end;
+      }
+    }
   }
 
   .content-box {
@@ -11,6 +20,10 @@
     gap: 4.2rem;
     padding: 4rem 5.2rem 3.2rem 12rem;
     overflow-x: scroll;
+
+    @media (max-width: 48em) {
+      padding-left: 4rem;
+    }
 
     .testimonial-box-lg {
       @extend .testimonial-box;

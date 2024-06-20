@@ -1,6 +1,4 @@
 .recent-blogs {
-  padding-block: $padding-block-section-lg;
-
   h2 {
     margin-bottom: $padding-block-section-md;
   }
@@ -22,6 +20,21 @@
         font-weight: 500;
         gap: 1.6rem;
         margin-top: 6.8rem;
+      }
+    }
+
+    @media (max-width: 56em) {
+      img {
+        width: 50%;
+        height: 50%;
+      }
+    }
+    @media (max-width: 48em) {
+      flex-direction: column;
+
+      img {
+        width: 100%;
+        height: auto;
       }
     }
   }

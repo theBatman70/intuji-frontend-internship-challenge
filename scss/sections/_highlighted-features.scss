@@ -1,17 +1,19 @@
 .highlighted-features {
   background-color: $subtle-blue;
-  padding: $padding-block-section-lg;
   position: relative;
 
   .design-dashes {
     position: absolute;
     bottom: 11rem;
     left: 0;
+    z-index: 1;
   }
 
   .content-box {
+    z-index: 9;
     .cards-box {
       gap: 3.2rem;
+
       .card {
         outline: 1px solid #abc8d2;
         background-color: $primary-white;
@@ -36,12 +38,42 @@
       .card:nth-child(1),
       .card:nth-child(2) {
         grid-row: span 2;
+
+        @media (max-width: 64em) {
+          grid-row: 1;
+        }
       }
 
       .card:nth-child(3),
       .card:nth-child(4) {
         grid-column: 3;
         padding-block: 3rem;
+        @media (max-width: 64em) {
+          grid-row: 2;
+          padding-block: 3rem;
+        }
+      }
+
+      @media (max-width: 64em) {
+        .card:nth-child(4) {
+          grid-column: 2;
+        }
+        .card:nth-child(3) {
+          grid-column: 1;
+        }
+      }
+
+      @media (max-width: 48rem) {
+        .card:nth-child(2) {
+          grid-row: 2;
+        }
+        .card:nth-child(3) {
+          grid-row: 3;
+        }
+        .card:nth-child(4) {
+          grid-row: 4;
+          grid-column: 1;
+        }
       }
     }
   }

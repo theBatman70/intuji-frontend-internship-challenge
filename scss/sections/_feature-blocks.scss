@@ -1,11 +1,10 @@
 .feature-blocks {
-  padding-block: $padding-block-section-md;
-
   .top-feature {
     margin-bottom: 11.9rem;
 
     .feature-head {
       display: flex;
+      gap: 3.4rem;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 7rem;
@@ -24,6 +23,17 @@
 
       .testimonial-box {
         width: 35%;
+      }
+
+      @media (max-width: 48em) {
+        flex-direction: column;
+
+        .title-box {
+          width: 100%;
+        }
+        .testimonial-box {
+          width: 100%;
+        }
       }
     }
     .cards-box {
@@ -46,6 +56,7 @@
           flex-direction: column;
           align-items: center;
           padding: 3.2rem;
+          height: 80%;
           img {
             margin-bottom: 3.4rem;
           }
@@ -62,6 +73,7 @@
             font-size: $fs-vsm;
             color: $text-light-gray;
             line-height: 1.8;
+            margin-top: auto;
           }
         }
       }
@@ -71,6 +83,7 @@
   .feature-block {
     display: flex;
     align-items: center;
+    margin-bottom: 6rem !important;
 
     .text-box {
       .subtitle {
@@ -96,6 +109,11 @@
         width: 80%;
       }
     }
+
+    @media (max-width: 48em) {
+      flex-direction: column;
+      gap: 4rem;
+    }
   }
 
   .track-payments {
@@ -113,18 +131,29 @@
       }
       .feature-image {
         width: 100%;
-        display: block;
       }
     }
 
     .text-box {
-      width: 50%;
+      width: 60%;
+    }
+
+    @media (max-width: 48em) {
+      .text-box {
+        width: 100%;
+        order: -1;
+      }
     }
   }
 
   .save-money {
     .feature-image {
       max-width: 55%;
+
+      @media (max-width: 48rem) {
+        max-width: 80%;
+        align-self: flex-start;
+      }
     }
   }
 }
